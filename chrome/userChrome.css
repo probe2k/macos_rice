@@ -1,0 +1,63 @@
+/* Navigation toolbar (bar below tabs) */
+#nav-bar {
+    background-color: #000000 !important;
+    box-shadow: none !important; /* Removes separator line */
+}
+
+/* Tab text color */
+.tab-label {
+    color: #ffffff !important;
+}
+
+/* URL Bar - Inactive (default) */
+#urlbar,
+#urlbar-input-container,
+#urlbar-background {
+    background-color: #101010 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important; /* Gray border replaces blue */
+}
+
+/* URL Bar - Active (focused) */
+#urlbar[focused],
+#urlbar[focused] #urlbar-input-container,
+#urlbar[focused] #urlbar-background {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important; /* Gray border when focused */
+}
+
+/* URL Bar dropdown suggestion box */
+.urlbarView {
+    background-color: #111111 !important; /* Matches active URL bar */
+    border-color: #444444 !important;
+}
+
+/* URL Bar dropdown items */
+.urlbarView-row {
+    background-color: transparent !important;
+}
+
+.urlbarView-row[selected] {
+    background-color: #444444 !important; /* Slightly lighter gray for selected item */
+}
+
+/* Search bar (optional, matches URL bar) */
+.searchbar-textbox {
+    background-color: #101010 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+.searchbar-textbox[focused] {
+    background-color: #111111 !important;
+    border-color: #444444 !important;
+}
+
+.tabbrowser-tab:nth-of-type(4n+0){--bgcolor: #0078ff}
+.tabbrowser-tab:nth-of-type(4n+1){--bgcolor: #bd00ff}
+.tabbrowser-tab:nth-of-type(4n+2){--bgcolor: #ff9a00}
+.tabbrowser-tab:nth-of-type(4n+3){--bgcolor: #01ff1f}
+.tabbrowser-tab:nth-of-type(4n+4){--bgcolor: #e3ff00}
+
+.tab-context-line{border-radius: 5px !important; translate: -5px 10px ; margin: 0 50px 0 5px; width: 50%; height: 13px !important; filter: blur(13px); overflow: visible !important; z-index: 10; background-color: var(--bgcolor); position: relative}
