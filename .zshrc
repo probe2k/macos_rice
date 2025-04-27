@@ -1,4 +1,5 @@
-PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+#PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+PROMPT='%(?.%F{green} .%F{red} ) %B%(!.%F{red}%n.%F{117}%n)%f %F{214}%~%f%b '
 
 alias ls='ls --color=auto'
 alias ll='ls -a --color=auto'
