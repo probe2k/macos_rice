@@ -135,34 +135,34 @@ function config.nvim_tree()
 
 			icons = {
 				show = {
-					file = false,
-					folder = false,
+					file = true,
+					folder = true,
 					folder_arrow = false,
-					git = false,
+					git = true,
 				},
---				glyphs = {
---					default = '',
---					symlink = '',
---					folder = {
---						default = '',
---						empty = '',
---						empty_open = '',
---						open = '',
---						symlink = '',
---						symlink_open = '',
---						arrow_open = '',
---						arrow_closed = '',
---					},
---					git = {
---						unstaged = '✗',
---						staged = '✓',
---						unmerged = '',
---						renamed = '➜',
---						untracked = '★',
---						deleted = '',
---						ignored = '◌',
---					},
---				},
+				glyphs = {
+					default = '',
+					symlink = '',
+					folder = {
+						default = '',
+						empty = '',
+						empty_open = '',
+						open = '',
+						symlink = '',
+						symlink_open = '',
+						arrow_open = '',
+						arrow_closed = '',
+					},
+					git = {
+						unstaged = '✗',
+						staged = '✓',
+						unmerged = '',
+						renamed = '➜',
+						untracked = '★',
+						deleted = '',
+						ignored = '◌',
+					},
+				},
 			},
 		},
 		filters = {
@@ -172,16 +172,16 @@ function config.nvim_tree()
 	vim.api.nvim_set_hl(0, 'NvimTreeNormal', { bg = 'None' })
 end
 
-function config.cat()
-	require('catppuccin').setup({
-		flavor = 'mocha',
-		lsp_trouble = false,
-		transparent_background = true,
-		dim_inactive = { enabled = false },
-	})
-
-	vim.cmd('colorscheme catppuccin')
-end
+--function config.cat()
+--	require('catppuccin').setup({
+--		flavor = 'mocha',
+--		lsp_trouble = false,
+--		transparent_background = true,
+--		dim_inactive = { enabled = false },
+--	})
+--
+--	vim.cmd('colorscheme catppuccin')
+--end
 
 function config.osaka()
 	require('solarized-osaka').setup({
