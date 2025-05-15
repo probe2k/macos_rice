@@ -9,6 +9,18 @@
     color: #ffffff !important;
 }
 
+/* Set tabbar color to black */
+#tabbrowser-tabs,
+.tabbrowser-arrowscrollbox,
+#TabsToolbar {
+	background-color: black !important;
+}
+
+/* Ensure individual tabs have transparent backgrounds to show the black tabbar */
+.tabbrowser-tab {
+	background-color: black !important;
+}
+
 /* URL Bar - Inactive (default) */
 #urlbar,
 #urlbar-input-container,
@@ -60,4 +72,4 @@
 .tabbrowser-tab:nth-of-type(4n+3){--bgcolor: #01ff1f}
 .tabbrowser-tab:nth-of-type(4n+4){--bgcolor: #e3ff00}
 
-.tab-context-line{border-radius: 5px !important; translate: -5px 10px ; margin: 0 50px 0 5px; width: 50%; height: 13px !important; filter: blur(13px); overflow: visible !important; z-index: 10; background-color: var(--bgcolor); position: relative}
+.tab-context-line{border-radius: 5px !important; translate: -5px 10px ; margin: 0 100px 0 5px; width: 80%; height: 13px !important; filter: blur(13px); overflow: visible !important; z-index: 10; background-color: var(--bgcolor); position: fixed; left: 5px;}
