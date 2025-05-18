@@ -1,0 +1,50 @@
+;; extends
+;; Keywords
+
+((class_definition) @keyword (#set! conceal " "))
+
+((return_statement) @keyword (#set! conceal "󰌑"))
+((pass_statement)   @keyword (#set! conceal "󰈺"))
+((import_statement) @keyword (#set! conceal ""))
+((import_from_statement) @keyword (#set! conceal "󱃗"))
+((function_definition)    @keyword (#set! conceal "󰊕"))  ;; def
+((for_statement)    @keyword (#set! conceal ""))  ;; for
+((while_statement)  @keyword (#set! conceal ""))  ;; while
+((if_statement)     @keyword (#set! conceal "?"))
+((else_clause)      @keyword (#set! conceal "!"))
+((elif_clause)      @keyword (#set! conceal "¿"))
+((with_statement)   @keyword (#set! conceal ""))
+((try_statement)    @keyword (#set! conceal ""))
+((except_clause)    @keyword (#set! conceal ""))
+((finally_clause)   @keyword (#set! conceal "󰅐"))
+((assert_statement) @keyword (#set! conceal "󰓆"))
+;;((yield_expression) @keyword (#set! conceal "󰙨"))
+((lambda)           @keyword (#set! conceal "𝝺"))
+
+;; Booleans and None
+((true)  @constant.builtin (#set! conceal "󰓄"))
+((false) @constant.builtin (#set! conceal "󰓃"))
+((none)  @constant.builtin (#set! conceal "∅"))
+
+;; Function calls
+((call function: (identifier) @function (#eq? @function "print")) (#set! conceal ""))
+((call function: (identifier) @function (#eq? @function "len"))   (#set! conceal "#"))
+((call function: (identifier) @function (#eq? @function "range")) (#set! conceal ""))
+((call function: (identifier) @function (#eq? @function "open"))  (#set! conceal ""))
+((call function: (identifier) @function (#eq? @function "input")) (#set! conceal ""))
+
+;; Built-in modules
+;;((dotted_name name: (identifier) @variable (#eq? @variable "math")) (#set! conceal ""))
+;;((dotted_name name: (identifier) @variable (#eq? @variable "os"))   (#set! conceal "󰩴"))
+;;((dotted_name name: (identifier) @variable (#eq? @variable "sys"))  (#set! conceal ""))
+;;((dotted_name name: (identifier) @variable (#eq? @variable "json")) (#set! conceal ""))
+;;((dotted_name name: (identifier) @variable (#eq? @variable "re"))   (#set! conceal ""))
+
+;; Exceptions
+((raise_statement) @keyword (#set! conceal ""))
+((try_statement)   @keyword (#set! conceal ""))
+
+;; Comments
+;; Uncomment if conceal is desired for starting comment character:
+;; ((comment) @comment (#set! conceal "󰡡"))
+

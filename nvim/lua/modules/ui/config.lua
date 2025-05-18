@@ -183,46 +183,46 @@ end
 --	vim.cmd('colorscheme catppuccin')
 --end
 
-function config.osaka()
-	require('solarized-osaka').setup({
-		transparent = true,
-		styles = {
-			comments = { italic = true },
-			keywords = { italic = true },
-			functions = {},
-			variables = {},
-			sidebars = "dark",
-			floats = "dark"
-		},
-	})
-
-	vim.cmd('colorscheme solarized-osaka')
-end
-
---function config.starry()
---	require('starry').setup({
---		border = false,
---		italics = {
---			comments = true,
---			keywords = false,
---			functions = true,
---			variables = false,
---			strings = false,
---		},
---		contrast = {
---			enable = true,
---			terminal = true,
---		},
---		disable = {
---			background = true,
---			term_colors = false,
---		},
---		style = {
---			name = 'earlysummer',
+--function config.osaka()
+--	require('solarized-osaka').setup({
+--		transparent = true,
+--		styles = {
+--			comments = { italic = true },
+--			keywords = { italic = true },
+--			functions = {},
+--			variables = {},
+--			sidebars = "dark",
+--			floats = "dark"
 --		},
 --	})
---	vim.cmd('colorscheme moonlight')
+--
+--	vim.cmd('colorscheme solarized-osaka')
 --end
+
+function config.starry()
+	require('starry').setup({
+		border = false,
+		italics = {
+			comments = true,
+			keywords = false,
+			functions = true,
+			variables = false,
+			strings = false,
+		},
+		contrast = {
+			enable = true,
+			terminal = true,
+		},
+		disable = {
+			background = true,
+			term_colors = false,
+		},
+		style = {
+			name = 'earlysummer',
+		},
+	})
+	vim.cmd('colorscheme moonlight')
+end
 
 --vim.api.nvim_create_user_command('Transparent', function()
 --	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })

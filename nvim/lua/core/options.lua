@@ -38,6 +38,7 @@ local function load_options()
 		list           = true;
 		showbreak      = "↪ ";
 		listchars      = "tab:┊ ,nbsp:+,trail:·,extends:→,precedes:←,eol:↲";
+		fillchars      = "eob: ";
 		title          = true;
 		background     = "dark";
 		fileencoding   = "utf-8";

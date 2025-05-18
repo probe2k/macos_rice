@@ -48,17 +48,17 @@ return function(ui)
 --		config = conf.cat,
 --	})
 
-	ui({
-		"craftzdog/solarized-osaka.nvim",
-		lazy = true,
-		name = 'solarized-osaka',
-		config = conf.osaka,
-	})
-
 --	ui({
---		'ray-x/starry.nvim',
+--		"craftzdog/solarized-osaka.nvim",
 --		lazy = true,
---		name = 'starry',
---		config = conf.starry,
+--		name = 'solarized-osaka',
+--		config = conf.osaka,
 --	})
+
+	ui({
+		'ray-x/starry.nvim',
+		lazy = true,
+		name = 'starry',
+		config = conf.starry,
+	})
 end
