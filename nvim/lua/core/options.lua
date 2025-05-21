@@ -37,7 +37,7 @@ local function load_options()
 		display        = "lastline";
 		list           = true;
 		showbreak      = "↪ ";
-		listchars      = "tab:┊ ,nbsp:+,trail:·,extends:→,precedes:←,eol:↲";
+		listchars      = "tab:┊ ,nbsp:+,trail:·,extends:→,precedes:←,eol:¬";
 		fillchars      = "eob: ";
 		title          = true;
 		background     = "dark";
@@ -51,7 +51,8 @@ local function load_options()
 		numberwidth    = 4;
 		relativenumber = true;
 		linebreak      = true;
-		cursorline     = false;
+		cursorline     = true;
+		cursorcolumn   = true;
 		number         = true;
 		guicursor      = "";
 		signcolumn     = "yes";
