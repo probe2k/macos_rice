@@ -56,9 +56,16 @@ return function(ui)
 --	})
 
 	ui({
-		'ray-x/starry.nvim',
+		'nyoom-engineering/oxocarbon.nvim',
 		lazy = true,
-		name = 'starry',
-		config = conf.starry,
+		name = 'oxocarbon',
+		config = conf.oxo,
 	})
+
+--	ui({
+--		'ray-x/starry.nvim',
+--		lazy = true,
+--		name = 'starry',
+--		config = conf.starry,
+--	})
 end

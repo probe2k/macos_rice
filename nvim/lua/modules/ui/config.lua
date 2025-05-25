@@ -199,36 +199,45 @@ end
 --	vim.cmd('colorscheme solarized-osaka')
 --end
 
-function config.starry()
-	require('starry').setup({
-		border = false,
-		italics = {
-			comments = true,
-			keywords = false,
-			functions = true,
-			variables = false,
-			strings = false,
-		},
-		contrast = {
-			enable = true,
-			terminal = true,
-		},
-		disable = {
-			background = true,
-			term_colors = false,
-		},
-		style = {
-			name = 'earlysummer',
-		},
-	})
-	vim.cmd('colorscheme moonlight')
-end
+--function config.starry()
+--	require('starry').setup({
+--		border = false,
+--		italics = {
+--			comments = true,
+--			keywords = false,
+--			functions = true,
+--			variables = false,
+--			strings = false,
+--		},
+--		contrast = {
+--			enable = true,
+--			terminal = true,
+--		},
+--		disable = {
+--			background = true,
+--			term_colors = false,
+--		},
+--		style = {
+--			name = 'earlysummer',
+--		},
+--	})
+--	vim.cmd('colorscheme moonlight')
+--end
 
---vim.api.nvim_create_user_command('Transparent', function()
---	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
---	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
---	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
---end, { nargs = '*' })
+vim.api.nvim_create_user_command('Transparent', function()
+	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
+	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
+	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
+end, { nargs = '*' })
+
+function config.oxo()
+    vim.opt.background = "dark"
+    vim.cmd('colorscheme oxocarbon')
+
+    if vim.fn.has('termguicolors') then
+        vim.opt.termguicolors = true
+    end
+end
 
 function config.blankline()
 	vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]

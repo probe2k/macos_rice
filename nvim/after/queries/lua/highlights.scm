@@ -19,7 +19,7 @@
 ;; (("comment_start"    @comment) (#set! conceal "󰡡"))
 
 ;; Function names
-((function_call name: (identifier) @TSFuncMacro (#eq? @TSFuncMacro "require")) (#set! conceal "󰫿"))
+((function_call name: (identifier) @TSFuncMacro (#eq? @TSFuncMacro "require")) (#set! conceal "󰰠"))
 ((function_call name: (identifier) @TSFuncMacro (#eq? @TSFuncMacro "print"  )) (#set! conceal " "))
 ((function_call name: (identifier) @TSFuncMacro (#eq? @TSFuncMacro "pairs"  )) (#set! conceal ""))
 ((function_call name: (identifier) @TSFuncMacro (#eq? @TSFuncMacro "ipairs" )) (#set! conceal ""))
@@ -36,9 +36,9 @@
 (((dot_index_expression) @field (#eq? @field "vim.fn"      )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.g"       )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.schedule")) (#set! conceal ""))
-(((dot_index_expression) @field (#eq? @field "vim.opt"     )) (#set! conceal "S"))
-(((dot_index_expression) @field (#eq? @field "vim.env"     )) (#set! conceal "$"))
-(((dot_index_expression) @field (#eq? @field "vim.o"       )) (#set! conceal "O"))
+(((dot_index_expression) @field (#eq? @field "vim.opt"     )) (#set! conceal "󰘵"))
+(((dot_index_expression) @field (#eq? @field "vim.env"     )) (#set! conceal ""))
+(((dot_index_expression) @field (#eq? @field "vim.o"       )) (#set! conceal "󱎪"))
 (((dot_index_expression) @field (#eq? @field "vim.bo"      )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.wo"      )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.keymap.set")) (#set! conceal ""))
