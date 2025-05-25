@@ -1,5 +1,22 @@
-#PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
-PROMPT='%(?.%F{green} .%F{red} ) %B%(!.%F{red}%n.%F{117}%n)%f %F{214}%~%f%b '
+# Enable vcs_info for Git status
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '!'  # Unstaged changes
+zstyle ':vcs_info:*' stagedstr '+'    # Staged changes
+zstyle ':vcs_info:git:*' formats ' %F{blue} %b%u%c%f'  # Branch + indicators
+zstyle ':vcs_info:git:*' actionformats ' %F{blue} %b|%a%u%c%f'  # During rebase/merge
+
+# Update vcs_info before each prompt
+precmd() { vcs_info }
+setopt prompt_subst  # Allow dynamic prompt expansion
+
+# Custom Starship-like prompt
+PS1='%F{208}%B%~%b%f${vcs_info_msg_0_}
+%(?.%F{green}%B.%F{red}%B)❯%b%f '
+
+# PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+# PROMPT='%(?.%F{green}.%F{red}) %(!.%F{red}%n.%F{117}%n)%f %F{214}%~%f '
 
 alias ls='ls --color=auto'
 alias ll='ls -a --color=auto'
