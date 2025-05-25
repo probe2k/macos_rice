@@ -137,7 +137,7 @@ function config.nvim_tree()
 				show = {
 					file = true,
 					folder = true,
-					folder_arrow = false,
+					folder_arrow = true,
 					git = true,
 				},
 				glyphs = {
@@ -224,11 +224,11 @@ end
 --	vim.cmd('colorscheme moonlight')
 --end
 
-vim.api.nvim_create_user_command('Transparent', function()
-	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
-	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
-	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
-end, { nargs = '*' })
+--vim.api.nvim_create_user_command('Transparent', function()
+--	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
+--	vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'NONE', ctermbg = 'NONE' })
+--	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
+--end, { nargs = '*' })
 
 function config.oxo()
     vim.opt.background = "dark"
