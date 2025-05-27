@@ -10,10 +10,14 @@ zstyle ':vcs_info:git:*' actionformats ' %F{blue} %b|%a%u%c%f'  # During reba
 # Update vcs_info before each prompt
 precmd() { vcs_info }
 setopt prompt_subst  # Allow dynamic prompt expansion
+# setopt autocd  # Allow changing directory without using cd command
 
 # Custom Starship-like prompt
-PS1='%F{208}%B%~%b%f${vcs_info_msg_0_}
-%(?.%F{green}%B.%F{red}%B)❯%b%f '
+#PS1='%F{208}%B%~%b%f${vcs_info_msg_0_}
+#%(?.%F{green}%B.%F{red}%B)❯%b%f '
+
+# PS1='%(?.%F{green}%B.%F{red}%B)%b%f %F{159}%B%~%b%f${vcs_info_msg_0_} '
+PS1='%F{159}%B%~%b%f${vcs_info_msg_0_} '
 
 # PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
 # PROMPT='%(?.%F{green}.%F{red}) %(!.%F{red}%n.%F{117}%n)%f %F{214}%~%f '
