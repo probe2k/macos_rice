@@ -46,5 +46,11 @@
 
 ;; Comments
 ;; Uncomment if conceal is desired for starting comment character:
-;; ((comment) @comment (#set! conceal "󰡡"))
+((comment) @comment (#set! conceal "󰡡"))
 
+;; Additions
+;;((comparison_operator operators: "in" @TSOperator) (#set! conceal "󰬰"))
+;;((not_operator "not" @keyword.operator) (#set! conceal "󰣤"))
+;;((function_definition "->" @operator) (#set! conceal ""))
+;;((function_definition parameters: (parameters (identifier) @parameter (#eq? @parameter "self"))) (#set! conceal "󰰣"))
+;;((attribute object: (identifier) @variable (#eq? @variable "self")) (#set! conceal "󰰣"))
