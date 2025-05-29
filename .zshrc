@@ -2,25 +2,14 @@
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '!'  # Unstaged changes
-zstyle ':vcs_info:*' stagedstr '+'    # Staged changes
-zstyle ':vcs_info:git:*' formats ' %F{blue} %b%u%c%f'  # Branch + indicators
-zstyle ':vcs_info:git:*' actionformats ' %F{blue} %b|%a%u%c%f'  # During rebase/merge
+zstyle ':vcs_info:*' unstagedstr '%F{red}%f'
+zstyle ':vcs_info:*' stagedstr '%F{green}✚%f'
+zstyle ':vcs_info:git:*' formats '%F{111}git:%F{198}(%b)%u%c%f '
 
-# Update vcs_info before each prompt
 precmd() { vcs_info }
-setopt prompt_subst  # Allow dynamic prompt expansion
-# setopt autocd  # Allow changing directory without using cd command
+setopt prompt_subst
 
-# Custom Starship-like prompt
-#PS1='%F{208}%B%~%b%f${vcs_info_msg_0_}
-#%(?.%F{green}%B.%F{red}%B)❯%b%f '
-
-# PS1='%(?.%F{green}%B.%F{red}%B)%b%f %F{159}%B%~%b%f${vcs_info_msg_0_} '
-PS1='%F{159}%B%~%b%f${vcs_info_msg_0_} '
-
-# PROMPT='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
-# PROMPT='%(?.%F{green}.%F{red}) %(!.%F{red}%n.%F{117}%n)%f %F{214}%~%f '
+PS1='%(?.%F{46}➜ .%F{red}➜ ) %F{81}%~ %f${vcs_info_msg_0_}%f'
 
 alias ls='ls --color=auto'
 alias ll='ls -a --color=auto'
