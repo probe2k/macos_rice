@@ -9,7 +9,7 @@ zstyle ':vcs_info:git:*' formats '%F{111}git:%F{198}(%b)%u%c%f '
 precmd() { vcs_info }
 setopt prompt_subst
 
-PS1='%(?.%F{46}➜ .%F{red}➜ ) %F{81}%~ %f${vcs_info_msg_0_}%f'
+PS1='%(?.%F{46}➜ .%F{red}➜ ) %F{81}%B%~%b %f${vcs_info_msg_0_}%f'
 
 alias ls='ls --color=auto'
 alias ll='ls -a --color=auto'
