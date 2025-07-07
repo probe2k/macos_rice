@@ -55,17 +55,24 @@ return function(ui)
 --		config = conf.osaka,
 --	})
 
+--	ui({
+--		'nyoom-engineering/oxocarbon.nvim',
+--		lazy = true,
+--		name = 'oxocarbon',
+--		config = conf.oxo,
+--	})
+
 	ui({
-		'nyoom-engineering/oxocarbon.nvim',
+		'xiyaowong/transparent.nvim',
+		cmd = { 'TransparentEnable', 'TransparentDisable', 'TransparentToggle' },
 		lazy = true,
-		name = 'oxocarbon',
-		config = conf.oxo,
+		name = 'transparent',
 	})
 
---	ui({
---		'ray-x/starry.nvim',
---		lazy = true,
---		name = 'starry',
---		config = conf.starry,
---	})
+	ui({
+		'ray-x/starry.nvim',
+		lazy = true,
+		name = 'starry',
+		config = conf.starry,
+	})
 end

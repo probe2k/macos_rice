@@ -51,8 +51,8 @@ local function load_options()
 		numberwidth    = 4;
 		relativenumber = true;
 		linebreak      = true;
-		cursorline     = true;
-		cursorcolumn   = true;
+		cursorline     = false;
+		cursorcolumn   = false;
 		number         = true;
 		guicursor      = "";
 		signcolumn     = "yes";

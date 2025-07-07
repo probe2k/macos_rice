@@ -33,12 +33,12 @@ return function(use)
 	use({
 		'nvim-telescope/telescope.nvim',
 		cmd = 'Telescope',
+		lazy = true,
 		config = conf.telescope,
 		init = conf.telescope_preload,
 		dependencies = {
 			{ 'nvim-lua/plenary.nvim', lazy = true },
 		},
-		lazy = true,
 	})
 
 end

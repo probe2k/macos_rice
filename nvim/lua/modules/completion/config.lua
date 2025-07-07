@@ -6,7 +6,7 @@ function config.nvim_lsp()
 end
 
 function config.mason()
-	local lsp_list = { 'lua-language-server' }
+	local lsp_list = { 'lua-language-server', 'typescript-language-server' }
 
 	require('mason').setup({
 		ensure_installed = lsp_list,
@@ -111,8 +111,8 @@ function config.nvim_cmp()
 			end,
 		},
 
-    completion = {
-      autocomplete = { require('cmp.types').cmp.TriggerEvent.TextChanged },
+		completion = {
+			autocomplete = { require('cmp.types').cmp.TriggerEvent.TextChanged },
 			completeopt = 'menu,menuone,noselect,noinsert',
 		},
 
@@ -125,6 +125,10 @@ function config.nvim_cmp()
 			['<C-e>'] = cmp.mapping.abort(),
 			['<CR>'] = cmp.mapping.confirm({ select = false }),
 		}),
+
+		experimental = {
+			ghost_text = true,
+		},
 
 		sources = sources,
 	})

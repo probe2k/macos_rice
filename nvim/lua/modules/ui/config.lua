@@ -199,30 +199,48 @@ end
 --	vim.cmd('colorscheme solarized-osaka')
 --end
 
---function config.starry()
---	require('starry').setup({
---		border = false,
---		italics = {
---			comments = true,
---			keywords = false,
---			functions = true,
---			variables = false,
---			strings = false,
---		},
---		contrast = {
---			enable = true,
---			terminal = true,
---		},
---		disable = {
---			background = true,
---			term_colors = false,
---		},
---		style = {
---			name = 'earlysummer',
---		},
---	})
---	vim.cmd('colorscheme moonlight')
---end
+function config.starry()
+	require('transparent').setup({
+		groups = {
+			'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+			'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+			'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+			'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+			'EndOfBuffer',
+		},
+		extra_groups = {
+			'NormalFloat', 'TelescopeNormal', 'TelescopePromptBorder', 'TelescopePreviewBorder', 'TelescopeResultsBorder',
+		},
+		exclude_groups = {},
+		on_clear = function() end,
+	})
+
+	require('starry').setup({
+		border = false,
+		italics = {
+			comments = true,
+			keywords = false,
+			functions = true,
+			variables = false,
+			strings = false,
+		},
+		contrast = {
+			enable = true,
+			terminal = true,
+		},
+		disable = {
+			background = true,
+			term_colors = false,
+		},
+		style = {
+			name = 'earlysummer',
+		},
+	})
+
+	require('transparent').clear_prefix('BufferLine')
+	vim.cmd('TransparentEnable')
+	vim.cmd('colorscheme moonlight')
+end
 
 --vim.api.nvim_create_user_command('Transparent', function()
 --	vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
@@ -230,14 +248,14 @@ end
 --	vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'NONE', ctermbg = 'NONE' })
 --end, { nargs = '*' })
 
-function config.oxo()
-    vim.opt.background = "dark"
-    vim.cmd('colorscheme oxocarbon')
-
-    if vim.fn.has('termguicolors') then
-        vim.opt.termguicolors = true
-    end
-end
+--function config.oxo()
+--    vim.opt.background = "dark"
+--    vim.cmd('colorscheme oxocarbon')
+--
+--    if vim.fn.has('termguicolors') then
+--        vim.opt.termguicolors = true
+--    end
+--end
 
 function config.blankline()
 	vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
