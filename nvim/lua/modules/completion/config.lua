@@ -174,13 +174,13 @@ function config.telescope()
 	require('telescope').setup({
 		pickers = {
 			find_files = {
-				disable_devicons = true
+				disable_devicons = false
 			},
 		},
 		defaults = {
-			prompt_prefix = '👀 ',
-			selection_caret = [[👉 ]],
-			layout_strategy = 'flex',
+			prompt_prefix = '🔍 ',
+			selection_caret = ' ',
+			layout_strategy = 'horizontal',
 			sorting_strategy = 'ascending',
 			selection_strategy = 'closest',
 			file_ignore_patterns = { 'node_modules', 'vendor', 'site-packages' },
@@ -192,19 +192,10 @@ function config.telescope()
 				}
 			},
 			layout_config = {
-				prompt_position = 'top',
-				width = 0.9,
+				prompt_position = "top",
 				horizontal = {
-					preview_width = 0.6,
-				},
-				vertical = {
-					mirror = true,
-					width = 0.75,
-					height = 0.85,
-					preview_height = 0.4,
-				},
-				flex = {
-					flip_columns = 160,
+					mirror = false,
+					preview_width = 0.5,
 				},
 			},
 		},

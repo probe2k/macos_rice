@@ -31,7 +31,7 @@
 (((break_statement) @keyword) (#set! conceal "ﰈ"))
 
 ;; vim.*
-(((dot_index_expression) @field (#eq? @field "vim.cmd"     )) (#set! conceal  "" ))
+(((dot_index_expression) @field (#eq? @field "vim.cmd"     )) (#set! conceal  "" ))
 (((dot_index_expression) @field (#eq? @field "vim.api"     )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.fn"      )) (#set! conceal ""))
 (((dot_index_expression) @field (#eq? @field "vim.g"       )) (#set! conceal ""))

@@ -23,10 +23,29 @@ M.on_attach = function(client, bufnr)
 	keymap.set('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts)
 
 	local signs = { Error = '⛔️', Warn = '❗️', Hint = '⚡️', Info = '💡' }
-	for type, icon in pairs(signs) do
-		local hl = 'DiagnosticSign' .. type
-		vim.fn.sign_define(hl, { text = icon, texthl= hl, numhl = hl })
-	end
+	local severity = vim.diagnostic.severity
+	vim.diagnostic.config({
+		signs = {
+			text = {
+				[severity.ERROR] = '⛔️',
+				[severity.WARN]  = '❗️',
+				[severity.INFO]  = '💡',
+				[severity.HINT]  = '⚡️',
+			},
+			texthl = {
+				[severity.ERROR] = 'DiagnosticSignError',
+				[severity.WARN]  = 'DiagnosticSignWarn',
+				[severity.INFO]  = 'DiagnosticSignInfo',
+				[severity.HINT]  = 'DiagnosticSignHint',
+			},
+			numhl = {
+				[severity.ERROR] = 'DiagnosticSignError',
+				[severity.WARN]  = 'DiagnosticSignWarn',
+				[severity.INFO]  = 'DiagnosticSignInfo',
+				[severity.HINT]  = 'DiagnosticSignHint',
+			},
+		}
+	})
 end
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()

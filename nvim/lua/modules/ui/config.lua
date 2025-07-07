@@ -50,7 +50,7 @@ function config.nvim_bufferline()
 			truncate_names = false,
 			modified_icon = '●',
 			color_icons = true,
-			show_buffer_icons = false,
+			show_buffer_icons = true,
 			show_buffer_close_icons = false,
 			separator_style = thin,
 			left_trunc_marker = '◀️',
