@@ -1,0 +1,6 @@
+spicetify config current_theme Throwback	# https://github.com/bluedrift/Spicetify-Throwback/tree/master/Throwback
+spicetify config color_scheme base	# not required in this theme
+spicetify config extensions fullAppDisplayMod.js	# probably better to not use it with this theme
+spicetify config extensions fullAppDisplayMod.js-	# to remove the extension
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
+spicetify backup apply | spicetify apply
