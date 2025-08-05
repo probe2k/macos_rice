@@ -20,19 +20,20 @@ alias c='bat'
 alias grep='grep --color=auto'
 
 # Add conda initialization
-alias ci='eval "$(/Users/yash/Dev/miniconda/bin/conda shell.zsh hook)"'
+alias ci='eval "$(/Users/yash/Developer/miniconda/bin/conda shell.zsh hook)"'
 
 function cx() {
   conda deactivate 2>/dev/null
   unset CONDA_SHLVL CONDA_PROMPT_MODIFIER CONDA_DEFAULT_ENV CONDA_PREFIX
-  export PATH=$(echo "$PATH" | tr ":" "\n" | grep -v "/Users/yash/Dev/miniconda" | paste -sd ":" -)
+  export PATH=$(echo "$PATH" | tr ":" "\n" | grep -v "/Users/yash/Developer/miniconda" | paste -sd ":" -)
   unfunction conda 2>/dev/null
   hash -r
 }
 
 export CLICOLOR=1
 export PATH=$PATH:/opt/homebrew/bin
-export PATH=$PATH:/Users/yash/Dev/flutter/bin
+export PATH=$PATH:/Users/yash/Developer/flutter/bin
+export GOPATH=$HOME/go
 
 # Configure nvm
 export NVM_DIR="$HOME/.nvm"

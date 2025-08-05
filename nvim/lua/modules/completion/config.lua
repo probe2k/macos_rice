@@ -6,7 +6,7 @@ function config.nvim_lsp()
 end
 
 function config.mason()
-	local lsp_list = { 'lua-language-server', 'typescript-language-server' }
+	local lsp_list = { 'lua-language-server', 'gopls' }
 
 	require('mason').setup({
 		ensure_installed = lsp_list,
@@ -80,7 +80,7 @@ function config.nvim_cmp()
 	cmp.setup({
 		require('luasnip.loaders.from_vscode').lazy_load(),
 
-		preselect = cmp.PreselectMode.None,
+		preselect = cmp.PreselectMode.Item,
 
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
@@ -113,7 +113,7 @@ function config.nvim_cmp()
 
 		completion = {
 			autocomplete = { require('cmp.types').cmp.TriggerEvent.TextChanged },
-			completeopt = 'menu,menuone,noselect,noinsert',
+			completeopt = 'menu,menuone',
 		},
 
 		mapping = cmp.mapping({
