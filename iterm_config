@@ -1,0 +1,9 @@
+oxocarbon colorscheme
+background: 001f3d
+foreground: 00ffff
+cursor_background: 00ffff
+cursor_foreground: 161616
+
+transparency: 20
+blur: 20
+window_res: 145x55
