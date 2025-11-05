@@ -1,21 +1,32 @@
-# Enable vcs_info for Git status
+# Make sure to disable conda config with
+# conda config --set changeps1 false
+
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '%F{red}%f'
+zstyle ':vcs_info:*' unstagedstr '%F{red}󱈸%f'
 zstyle ':vcs_info:*' stagedstr '%F{green}✚%f'
-zstyle ':vcs_info:git:*' formats '%F{111}git:%F{198}(%b)%u%c%f '
+zstyle ':vcs_info:git:*' formats ' %F{green}git:%F{198}(%b)%u%c%f'
+precmd_conda_info() {
+	if [[ -n $CONDA_DEFAULT_ENV ]]; then
+		CONDA_ENV=" %F{blue}conda:%F{96}($CONDA_DEFAULT_ENV)%f"
+	else
+		CONDA_ENV=""
+			fi
+}
 
 precmd() { vcs_info }
+precmd_functions+=( precmd_conda_info )
 setopt prompt_subst
 
-PS1='%(?.%F{46}➜ .%F{red}➜ ) %F{81}%B%~%b %f${vcs_info_msg_0_}%f'
+PROMPT='%F{208}%~%f${vcs_info_msg_0_}%f${CONDA_ENV}%f
+%F{cyan}❯%f '
 
 # Setup aliases
-alias ls='ls --color=auto'
-alias ll='ls -a --color=auto'
 alias v='nvim'
 alias t='tmux'
+alias ls='ls --color=auto'
+alias ll='ls -a --color=auto'
 alias c='bat'
 alias grep='grep --color=auto'
 
@@ -30,9 +41,7 @@ function cx() {
   hash -r
 }
 
-export CLICOLOR=1
 export PATH=$PATH:/opt/homebrew/bin
-export PATH=$PATH:/Users/yash/Developer/flutter/bin
 export GOPATH=$HOME/go
 
 # Configure nvm
