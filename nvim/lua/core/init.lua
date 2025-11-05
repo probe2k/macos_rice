@@ -69,6 +69,9 @@ local load_core = function()
 	require("core.mappings")
 	require("core.events")
 	require("core.lazy"):boot_strap()
+	vim.defer_fn(function()
+		require("core.colorscheme").load_colorscheme()
+	end, 5)
 end
 
 load_core()
