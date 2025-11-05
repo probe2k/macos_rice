@@ -40,7 +40,7 @@ function config.starry()
 			"EndOfBuffer", "FloatBorder",
 		},
 		extra_groups = {
-			"NormalFloat", "TelescopeNormal", "TelescopePromptBorder", "TelescopePreviewBorder", "TelescopeResultsBorder", "NvimTreeNormal"
+			"NormalFloat", "TelescopeNormal", "TelescopePromptBorder", "TelescopePreviewBorder", "TelescopeResultsBorder", "NvimTreeNormal", "ColorColumn"
 		},
 		exclude_groups = {},
 		on_clear = function() end,

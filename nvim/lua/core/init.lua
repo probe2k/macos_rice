@@ -71,6 +71,7 @@ local load_core = function()
 	require("core.lazy"):boot_strap()
 	vim.defer_fn(function()
 		require("core.colorscheme").load_colorscheme()
+		require("core.lazy_nvim")
 	end, 5)
 end
 
