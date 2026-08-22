@@ -1,0 +1,114 @@
+# ─────────────────────────────────────────────
+# Window
+# ─────────────────────────────────────────────
+
+macos-titlebar-style = hidden
+window-decoration = auto
+
+background = #000000
+foreground = #c0caf5
+
+background-opacity = 0.70
+background-blur-radius = 50
+
+window-padding-x = 10
+window-padding-y = 10
+
+window-width = 155
+window-height = 50
+
+# Don't remember the previous window size
+window-save-state = never
+
+# ─────────────────────────────────────────────
+# Font
+# ─────────────────────────────────────────────
+
+font-size = 11.5
+
+# ─────────────────────────────────────────────
+# Cursor
+# ─────────────────────────────────────────────
+
+cursor-style = bar
+cursor-style-blink = true
+
+# Blink indefinitely
+cursor-style-blink = true
+
+cursor-color = #b4a4e8
+cursor-text = #16131f
+
+# ─────────────────────────────────────────────
+# Scrollback
+# ─────────────────────────────────────────────
+
+scrollback-limit = 10000
+
+# ─────────────────────────────────────────────
+# Selection / Clipboard
+# ─────────────────────────────────────────────
+
+copy-on-select = clipboard
+
+selection-foreground = #e0def4
+selection-background = #33324a
+
+# ─────────────────────────────────────────────
+# Bell
+# ─────────────────────────────────────────────
+
+bell-features = no-audio,no-title
+
+# ─────────────────────────────────────────────
+# Links
+# ─────────────────────────────────────────────
+
+link-previews = true
+
+# ─────────────────────────────────────────────
+# Confirmations
+# ─────────────────────────────────────────────
+
+confirm-close-surface = false
+
+# ─────────────────────────────────────────────
+# Colors — Linkarzu / Tokyo Night-ish
+# ─────────────────────────────────────────────
+
+palette = 0=#1a1726
+palette = 1=#f7768e
+palette = 2=#9ece6a
+palette = 3=#e0af68
+palette = 4=#7aa2f7
+palette = 5=#bb9af7
+palette = 6=#7dcfff
+palette = 7=#c0caf5
+
+palette = 8=#414868
+palette = 9=#f7768e
+palette = 10=#b9f27c
+palette = 11=#e8c08a
+palette = 12=#8db0ff
+palette = 13=#c8b0ff
+palette = 14=#a4dbff
+palette = 15=#ffffff
+
+# ─────────────────────────────────────────────
+# Keyboard
+# ─────────────────────────────────────────────
+
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = super+q=quit
+keybind = super+enter=toggle_fullscreen
+
+keybind = super++=increase_font_size:1
+keybind = super+-=decrease_font_size:1
+keybind = f5=reload_config
+
+# ─────────────────────────────────────────────
+# Misc
+# ─────────────────────────────────────────────
+
+shell-integration = detect
